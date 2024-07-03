@@ -1,0 +1,95 @@
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 209px;
+  height: 100vh;
+  background-color: #fff;
+  color: #e43f3f;
+  padding: 20px;
+  transition: transform 0.5s ease-in-out;
+  visibility: hidden; /* Initially hidden */
+  overflow: hidden;
+
+}
+
+.sliding-menu.sliding-menu-active {
+  transform: translateX(250px);
+  visibility: visible;
+  transition: transform 0.5s ease-in-out; /* Added transition effect */
+}
+
+
+.hidden {
+  visibility: hidden; /* Make it hidden after the transition */
+}
+
+.silde-options-container{padding-top: 60px;}
+.close-icon {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2); /* Temporary background for debugging */
+}
+
+.cart-icon{color: white;
+  font-size: 24px; /* Ensure the icon size is appropriate */
+  background-color: rgba(255, 255, 255, 0.2); /* Temporary background for debugging */
+  position: absolute;
+  top: 90px;
+  left: 20px;
+}
+
+.no-of-item{position: relative;
+            top: 19px;
+            left: 17px;
+            width: 12px;
+            height: 12px;
+            padding: 2px;
+            text-align: center;
+            background-color: rgb(248, 55, 55);
+            border-radius: 50%;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+.navbar-list{position: absolute;
+             top: 170px;}
+
+a {color: black;
+   text-decoration: none;}
+
+
+
+
+@media (max-width: 750px) {
+
+  .sliding-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 90%;
+    height: 100vh;
+    background-color: #fff;
+    color: #e43f3f;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    visibility: hidden; /* Initially hidden */
+    overflow: hidden;
+  
+  }
+
+  .no-of-item{
+    top: 20px;
+    left: 17px;
+    font-size: 8px;
+    width: 10px;
+    height: 10px;
+  }
+}

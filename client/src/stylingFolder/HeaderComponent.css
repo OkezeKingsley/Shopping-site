@@ -1,0 +1,25 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Adjust background color as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+
+    color: #000; /* Black text color */
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000; /* Black icon color */
+  }

@@ -1,0 +1,133 @@
+
+.cart-container{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+.top-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .top-heading div p {
+    font-size: 17px;
+  }
+  
+  .product-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    width: 100%
+  }
+  
+  .product-heading div {
+    width: 10%;
+    text-align: left;
+  }
+  
+  .product-heading-price-container{text-align: right;}
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 5px;
+  }
+  .product-item:hover{
+    background-color: #e9f6e9;
+  }
+  /* .product-item div {
+    width: 33%;
+    text-align: left;
+  }
+   */
+  .product-item-name {
+    text-align: left;
+    flex-basis: 10%;
+    font-weight: bold;
+  }
+  .quantity-container {
+    display: flex;
+    flex-basis: 10%;
+    /* align-items: center; */
+  }
+  
+  .quantity-container button {
+    margin: 0 10px;
+  }
+  
+  .product-item-price{
+    flex-basis: 10%;
+  }
+  .remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subtotal {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid lightgrey;
+    border-right: none;
+    border-left: none;
+    padding: 20px 0;
+    width: 300px
+  }
+
+  .checkout-btn{background-color: #3e8e41;
+    color: white;
+    cursor: pointer;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+  }
+
+
+
+
+@media (max-width: 850px) {
+
+  .product-heading div {
+    width: 10%;
+    text-align: left;
+  }
+
+  .product-heading > div {
+    width: 20%;
+    text-align: left;
+  }
+  .product-item-name{flex-basis: 20%;}
+
+  .quantity-container{flex-basis: 20%;}
+
+  .product-item-price{
+    flex-basis: 20%;
+  }
+  .cancel-icon{ stroke: white;}
+}
+
+
+
+  

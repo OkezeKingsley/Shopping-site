@@ -1,0 +1,149 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eef2f5;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input, .textarea {
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.textarea {
+  resize: none;
+}
+
+.upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.file-input {
+  display: none;
+}
+
+.image-name {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.price-category-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price-input-container {
+  display: flex;
+  align-items: center;
+  flex-basis: 48%;
+}
+
+.price-input-container > .naira-sign {
+  margin-right: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.input-price {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.category-select-container {
+  flex-basis: 48%;
+}
+
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+.message {
+  background-color: #28a745; /* Success background color */
+  color: #fff; /* Text color */
+  padding: 10px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px; /* Space from the button */
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

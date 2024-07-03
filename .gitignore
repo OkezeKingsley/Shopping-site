@@ -1,0 +1,8 @@
+# client ignores
+/client/node_modules
+/client/.env
+
+# backend ignores
+/backend/node_modules
+/backend/.env
+

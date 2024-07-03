@@ -1,0 +1,96 @@
+.billing-container {
+  width: 80%;
+  margin: auto;
+}
+
+.billing-head {
+  padding: 50px 0;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.billing-form {
+  width: 80%;
+  margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.firstName-container, .lastName-container {
+  flex: 1;
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstName-container input, .lastName-container input {
+  flex-basis: 40%;
+  width: 80%;
+}
+
+.order-detail-text {
+  text-align: center;
+  margin: 40px 0;
+}
+.order-flex {
+  display: flex;
+  width: 100%;
+  background-color: #fdfdfd;
+}
+
+.order-flex > div:first-child {
+  order: 1;
+  flex-basis: 40%;
+  padding: 15px 0;
+}
+
+.order-flex > div:last-child {
+  order: 2;
+  flex-basis: 40%;
+  padding: 15px 0;
+}
+
+.mini-order-flex {
+  display: flex;
+}
+
+.mini-order-flex > div:nth-child(1) {
+  flex-basis: 30%;
+}
+
+
+.mini-order-flex > div:nth-child(1) > img {
+  width: 150px;
+  height: auto;
+}
+
+.mini-order-flex > div:nth-child(2) {
+  flex-basis: 30%;
+}
+
+
+.place-order-btn{width: 100%;
+                 padding: 20px 0;
+                 background-color: #28a745;
+                 border: none;
+                 border-radius: 5px;
+                 color: white;
+                 margin-bottom: 30px;
+                 cursor: pointer}

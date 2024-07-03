@@ -1,0 +1,135 @@
+.view-item-container {
+    height: 100vh;
+   
+  }
+  
+  .center-item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 100px; /* Add a margin to push the grid down */
+    width: 60%;
+    margin: auto;
+}
+  
+  .flex-body-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 380px;
+    margin-top: 50vh; /* Adjust the margin to half of the viewport height */
+    transform: translateY(-50%); /* Move it up by half of its own height */
+    height: 380px;
+  }
+  
+  .item-image-container {
+    padding: 10px;
+    border: 1px solid #ddd;
+    flex-basis: 35%;
+    height: 100%;
+    max-height: 380px;
+    overflow: hidden;
+  }
+
+  .image{width: 100%;
+          height: 100%;}
+  
+  .item-detail {
+    border: 1px solid lightgrey;
+    height: 100%;
+    position: relative;
+    flex-basis: 35%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+  }
+
+  .item-name{padding-bottom: 20px;}
+
+  .item-price{padding-bottom: 20px;
+              font-weight: bold;
+              font-size: 25;}
+  
+   .item-description{padding-top: 20px;}           
+  hr {
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .quantity-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  
+  .quantity-container button .number-of-order{
+    width: 30px;
+    height: 30px;
+    border: solid lightgray;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center; /* Ensure the text is centered */
+    line-height: 30px; /* Vertically center the text */
+  }
+  
+  .quantity-container button:hover {
+    background-color: #ccc;
+  }
+
+  .add-to-cart-btn{width: 80%;
+                  margin: 20px auto 0; /* Add margin to center and space from top */
+                  color: white;
+                  background-color: black;
+                  border: none;
+                  position: absolute;
+                  bottom: 20px; /* Adjust to ensure some space from the bottom */
+                  left: 50%;
+                  transform: translateX(-50%); /* Center the button */
+                  padding: 15px;
+                  cursor: pointer;
+                  text-align: center; /* Ensure text is centered */
+  }
+
+.success-message {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    animation: fadeOut 3s forwards; /* Fade out animation */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+  @media (max-width: 850px) {
+
+    .flex-body-container{display: block;
+                         }
+
+
+    .item-detail{margin-top: 20px;
+                 margin-bottom: 30px;}
+  }
+

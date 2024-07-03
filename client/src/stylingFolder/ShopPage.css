@@ -1,0 +1,262 @@
+.grid-body{
+    display: grid;
+    grid-template-columns: 250px auto;
+    gap: 30px;
+    height: 100vh;
+  
+}
+
+.show-filters{display: none;}
+
+/* filter-container */
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-right: 1px solid lightgrey;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  flex: 0 0 250px; /* Fixed width for filter container */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  }
+  
+  .filter-group {
+    margin-bottom: 20px;
+  }
+  
+  .filter-group p {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  span{padding-left: 3px;
+       padding-right: 3px;}
+  input[type="text"], input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+
+/* Styles for Apply Button */
+.apply-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 90%;
+  display: block;
+  text-align: center;
+  margin: 10px auto; /* Center the button */
+}
+
+.apply-button:hover {
+  background-color: #3e8e41;
+}
+
+
+/* Card container */
+.items-grid {
+  /* Add margin to accommodate the fixed filter container */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  width: 100%; /* Adjust the width */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  /* Scrollbar styles */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #666 #ddd; /* Firefox */
+}
+
+.items-grid::-webkit-scrollbar {
+  width: 6px; /* Slim width */
+}
+
+.items-grid::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.items-grid::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Transparent thumb */
+  border-radius: 10px; /* Rounded corners */
+  /* Remove the border property */
+}
+
+.items-grid::-webkit-scrollbar-thumb:hover {
+  background-color: transparent; /* Transparent thumb on hover */
+  /* Remove the border-color property */
+}
+
+.items-grid::-webkit-scrollbar-button {
+  display: none; /* Hide the scrollbar buttons */
+}
+
+.item-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 200px;
+  height: 380px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.item-card img {
+  width: 100%;
+  height: 78%; /* Ensure the image takes up full height */
+  object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
+  margin-bottom: 10px;
+}
+
+
+.item-card h3 {
+  font-weight: bold;
+  padding-bottom: 60px;
+  color: black; /* Adjust color for better contrast */
+  margin-bottom: 10px;
+}
+
+.item-card p {
+  font-size: 18px;
+  color: #666;
+}
+
+.item-card-flex {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 40px); /* Adjusted width with padding */
+  padding: 10px 20px; /* Added padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-card button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item-card button:hover {
+  background-color: #3e8e41;
+}
+
+.item-card:hover .hover-item-instruction {
+  display: block;
+}
+
+
+.hover-item-instruction{display: none;
+  background-color: black;
+  border: 1px solid black;
+  width: 100px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+@media (max-width: 850px) {
+
+  .grid-body{
+    display: block;
+  }
+
+  .show-filters{display: block;
+              border: 1px solid black;
+              width: 150px;
+              text-align: center;
+              padding: 10px 5px 10px 5px;
+              margin-left: 20px;
+              margin-top: 30px;}
+                      
+  .filter-container {
+                display: none; /* Hide filter container by default */
+              }  
+
+   /* Only show filter container if showFilters is true */
+  .show-filters .icon{
+    padding-right: 5px;
+  } 
+  .filter-container {
+    display: block;
+    }           
+
+   input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+  } 
+    
+  .price-input-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              gap: 10px;
+            }         
+
+  .apply-button{margin: 10px auto;
+    display: block; /* Ensure it is displayed as a block element */
+    width: 90%; }
+
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 10px;
+      width: 99%; /* Changed from 80% to 100% to take full width */
+     
+      margin: auto;
+      margin-top: 35px;
+      overflow-y: hidden;
+    }
+  
+    .item-card{margin: auto;
+      
+ 
+  }
+  
+}
